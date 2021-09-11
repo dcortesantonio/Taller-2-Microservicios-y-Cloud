@@ -85,3 +85,5 @@
     - (varA) : Se refiere al primer número al cual se le realizará la operación.
     - (varB) : Se refiere al segundo número al cual se le realizará la operación.
     - (varUser) : Se refiere a una cadena de texto la cual representa un usuario.
+
+  - Ruta para consultar el historial de utilización de cada operación:  - http://localhost:8888/calculadora/invocations/
