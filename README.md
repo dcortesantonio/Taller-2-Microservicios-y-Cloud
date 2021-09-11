@@ -1,10 +1,145 @@
 # Taller-2-Microservicios-y-Cloud
 
 - [Parte 1](#heading)
+  * [Servidor](#sub-heading-server)
+  * [Cliente Java](#sub-heading-client-java)
+  * [Cliente Móvil](#sub-heading-client-mobile)
 - [Parte 2](#heading-1)
   * [Servidor Eureka](#sub-heading-1)
     + [Operaciones](#sub-sub-heading-1)
   * [Postman](#sub-heading-2)
+
+  <a name="heading"></a>
+  ## Parte 1 - Servidor y Cliente Jersey (Bono: Cliente móvil)
+  
+  <a name="sub-heading-server"></a>
+  ### Servidor
+
+  - [ ]  Clonar el repositorio
+
+      ```bash
+      git clone https://github.com/dcortesantonio/Taller-2-Microservicios-y-Cloud.git
+      ```
+
+  - [ ]  Moverse a la carpeta ***server***
+
+      ```bash
+      cd Punto1/server/
+      ```
+
+  - [ ]  Correr el servidor
+
+      ```bash
+      mvn clean install exec:java
+      ```
+
+  - [ ]  Probar el servidor con el navegador o postman
+
+      La ruta base es GET -  [http://localhost:8080/myapp/travel/](http://localhost:8080/myapp/travel/) para obtener todos los paseos
+
+      Otras rutas son:
+
+      - DELETE - [http://localhost:8080/myapp/travel/](http://localhost:8080/myapp/travel/){idPaseo}: para eliminar un paseo
+      - PUT - [http://localhost:8080/myapp/travel/](http://localhost:8080/myapp/travel/){idPaseo}?paseoOrigin={nuevoOrigen}&paseoDest={nuevoDestino}
+      - POST -  [http://localhost:8080/myapp/travel/](http://localhost:8080/myapp/travel/) crear un paseo con el body:
+
+          ```bash
+          {
+            "name":"nombre del paseo (String)",
+            "origin":"origen del paseo (String)",
+            "destination":"destino del paseo (String)",
+            "date":"fecha del paseo (String formato yyyy-mm-dd",
+            "id":"identificador del paseo (int)"
+          }
+          ```
+
+      Todos los datos serán peristidos en una base MongoDB
+
+ <a name="sub-heading-client-java"></a>
+  ### Cliente Java
+  - [ ]  Moverse a la carpeta ***client***
+
+    ```bash
+    cd Punto1/client/ 
+    ```
+  - [ ]  Correr el cliente
+
+    ```bash
+    mvn clean install exec:java
+    ```
+  - [ ]  Seguir los pasos del menú
+  
+  <a name="sub-heading-client-mobile"></a>
+  ### Cliente Móvil
+  Instalar las dependencias globales
+
+  #### NodeJS:
+
+  - Para MacOS:
+    - Instalar [https://brew.sh](https://brew.sh/)
+    - `brew install node@14`
+  - Para windows -- Seguir las instrucciones en [https://nodejs.dev](https://nodejs.dev/)
+  - Para Linux
+    - Arch: yay -S nodejs-lts-fermium
+    - Ubuntu: sudo apt install nodejs
+
+  #### Expo-cli
+
+  Luego de instalar node
+
+  - `sudo npm install -g expo-cli`
+  - [ ]  Moverse a la carpeta ***client-rn***
+
+    ```bash
+    cd Punto1/client-rn/ 
+    ```
+
+  - [ ]  Instalar las dependencias del proyecto
+
+    ```bash
+    npm install
+    ```
+
+  - [ ]  Correr el proyecto
+
+    ```bash
+    expo start --no-dev --minify
+    ```
+
+  - [ ]  Abrir el simulador de iOS
+  - [ ]  En el proceso de expo tocar la tecla ***i***
+
+  #### Si se desea correr en dispositivos android
+
+  Instalar **Ngrok**
+
+  - Seguir las instrucciones en [https://ngrok.com/download](https://ngrok.com/download)
+  - Alternativamente `sudo npm install -g ngrok`
+  - [ ]  Moverse a la carpeta ***server***
+
+    ```bash
+    cd Punto1/server/
+    ```
+
+  - [ ]  Crear el tunel
+
+    ```bash
+    ngrok http 8080
+    ```
+
+    - Genera un link del tipo [http://99fb-190-27-49-167.ngrok.io](http://99fb-190-27-49-167.ngrok.io/)
+  - [ ]  Abrir el proyecto **client-rn**
+  - [ ]  Abrir el archivo **/src/api/jersery.js**
+  - [ ]  Reemplazar la línea: `baseURL: 'http://localhost:8080/myapp/travel'` por: `baseURL: '{tunel creado por ngrok}'`
+  - [ ]  Correr el proyecto
+
+    ```bash
+    expo start --no-dev --minify
+    ```
+
+  - [ ]  Abrir el simulador de Android
+  - [ ]  En el proceso de expo tocar la tecla ***a***
+
 
   <a name="heading-1"></a>
   ## Parte 2 - Spring Cloud
@@ -87,3 +222,4 @@
     - (varUser) : Se refiere a una cadena de texto la cual representa un usuario.
 
   - Ruta para consultar el historial de utilización de cada operación:  - http://localhost:8888/calculadora/invocations/
+

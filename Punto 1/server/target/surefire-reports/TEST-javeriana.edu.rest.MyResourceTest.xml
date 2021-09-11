@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="javeriana.edu.rest.MyResourceTest" time="1.119" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="ibm.signalhandling.rs" value="false"/>
+    <property name="java.vm.version" value="openj9-0.26.0"/>
+    <property name="sun.boot.library.path" value="/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib/default:/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/danieltibaquira/Documents/PUJ/MSC/Taller-2-Microservicios-y-Cloud/Punto 1/server"/>
+    <property name="com.ibm.oti.configuration" value="scar"/>
+    <property name="java.vm.vendor" value="Eclipse OpenJ9"/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Eclipse OpenJ9 VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/danieltibaquira/Documents/PUJ/MSC/Taller-2-Microservicios-y-Cloud/Punto 1/server"/>
+    <property name="java.runtime.version" value="11.0.11+9"/>
+    <property name="jdk.extensions.name" value="Extensions for OpenJDK for Eclipse OpenJ9"/>
+    <property name="java.fullversion" value="11.0.11+9
+JRE 11 Mac OS X amd64-64-Bit Compressed References 20210421_957 (JIT enabled, AOT enabled)
+OpenJ9   - b4cc246d9
+OMR      - 162e6f729
+JCL      - 7796c80419 based on jdk-11.0.11+9"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="com.ibm.vm.bitmode" value="64"/>
+    <property name="com.ibm.system.agent.path" value="/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib"/>
+    <property name="java.io.tmpdir" value="/var/folders/pk/3mfh7qx1111czrm27qywf15m0000gn/T/"/>
+    <property name="com.ibm.util.extralibs.properties" value=""/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/opt/homebrew/Cellar/maven/3.8.2/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib/default:/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib:/usr/lib"/>
+    <property name="maven.conf" value="/opt/homebrew/Cellar/maven/3.8.2/libexec/conf"/>
+    <property name="com.ibm.oti.vm.bootstrap.library.path" value="/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib/default:/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt/lib"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="com.ibm.cpu.endian" value="little"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="ibm.system.encoding" value="UTF-8"/>
+    <property name="os.version" value="10.16"/>
+    <property name="com.ibm.oti.vm.library.version" value="29"/>
+    <property name="com.ibm.jcl.checkClassPath" value=""/>
+    <property name="user.home" value="/Users/danieltibaquira"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="danieltibaquira"/>
+    <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.2/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="com.ibm.oti.shared.enabled" value="false"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install exec:java"/>
+    <property name="java.home" value="/Users/danieltibaquira/.sdkman/candidates/java/11.0.11.j9-adpt"/>
+    <property name="ibm.signalhandling.sigint" value="true"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.encoding" value="UTF-8"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="JRE 11 Mac OS X amd64-64-Bit Compressed References 20210421_957 (JIT enabled, AOT enabled)
+OpenJ9   - b4cc246d9
+OMR      - 162e6f729
+JCL      - 7796c80419 based on jdk-11.0.11+9"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="maven.home" value="/opt/homebrew/Cellar/maven/3.8.2/libexec"/>
+    <property name="jdk.extensions.version" value="11.0.11.0"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="java.compiler" value="j9jit29"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="ibm.signalhandling.sigchain" value="true"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK-11.0.11+9"/>
+  </properties>
+  <testcase classname="javeriana.edu.rest.MyResourceTest" name="testGetIt" time="1.119"/>
+</testsuite>
